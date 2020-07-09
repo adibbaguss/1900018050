@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    	<link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Formulir Pendaftaran Beasiswa S1</title>
+  </head>
+
+  <body>
+    <form action="proses.php" method="post" onSubmit="validasi()">
+      <table>
+        <tr>
+        <th colspan="3">FORMULIR PENDAFTARAN BEASISWA S1</th>
+        </tr>
+
+        <tr>
+          <td>NIM</td>
+          <td colspan="2"><input type="text" name="nim" id="nim" ></td>
+        </tr>
+        <tr>
+          <td>Nama Mahasiswa</td>
+          <td colspan="2"><input type="text" name="nama"  id="nama"></td>
+        </tr>
+
+        <tr>
+          <td>Tempat Lahir</td>
+          <td colspan="2"><input type="text" name="tempat" id="tempat"></td>
+        </tr>
+
+        <tr>
+          <td>Tanggal Lahir</td>
+          <td colspan="2"><input type="date" name="birthday" id="birthday"></td>
+        </tr>
+
+        <tr>
+          <td>Alamat</td>
+          <td colspan="2"><input type="text" name="alamat" id="alamat"></td>
+        </tr>
+
+        <tr>
+          <td>No. Handphone</td>
+          <td colspan="2"><input name="telp" id="telp"  type="text" minlength="10" maxlength="14">
+        </tr>
+
+        <tr>
+          <td>Kelamin</td>
+          <td><input type="radio"  name="gender" id="gender" value="Laki-laki">Laki-laki</td>
+          <td><input type="radio"  name="gender"  id="gender" value="Perempuan">Perempuan</td>
+        </tr>
+
+        <tr>
+          <td>Program Studi</td>
+          <td colspan="2">	 <select name="prodi"  id="prodi" >
+          					<option value="belum diisi"> - </option>
+          					<option value="Teknik Informatika">Teknik Informatika</option>
+          					<option value="Teknik Industri">Teknik Industri</option>
+          					<option value="Teknik Elektro">Teknik Elektro</option>
+          					<option value="Pendidikan Bahasa Arab">Pendidikan Bahasa Arab</option>
+          					<option value="Pendidikan Bahasa Indonesia">Pendidikan Bahasa Indonesia</option>
+          					<option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
+          					<option value="Sastra Indonesia">Sastra Indonesia</option>
+          					<option value="Sastra Inggris">Sastra Inggris</option>
+          					<option value="Sastra Jepang">Sastra Jepang</option>
+          				</select></td>
+          </tr>
+
+          <tr>
+            <td>Motivasi Mendaftar Beasiswa</td>
+            <td colspan="2"><input type="textarea" name="motv"  id="motv"></td>
+          </tr>
+
+          <tr>
+            <td>Nama Ayah</td>
+            <td colspan="2"><input type="text" name="namaayah" id="namaayah"></td>
+          </tr>
+
+          <tr>
+            <td>Pekerjaan Ayah</td>
+            <td colspan="2"><select name="jobayah" id="jobayah">
+            					<option value="belum diisi"> - </option>
+            					<option value="TNI">TNI</option>
+            					<option value="POLRI">POLRI</option>
+            					<option value="PNS">PNS</option>
+            					<option value="Guru">Guru</option>
+            					<option value="Dosen">Dosen</option>
+            					<option value="Petani">Petani</option>
+            					<option value="Nelayan">Nelayan</option>
+            					<option value="Wirausaha">Wirausaha</option>
+            					<option value="Pedagang">Pedagang</option>
+            					<option value="lainnya">lainnya</option>
+            				</select></td>
+                </tr>
+
+            <tr>
+              <td>Nama Ibu</td>
+              <td colspan="2"><input type="text" name="namaibu" id="namaibu"></td>
+            </tr>
+
+            <tr>
+              <td>Pekerjaan Ibu</td>
+              <td colspan="2">
+                <select name="jobibu" id="jobibu">
+                  <option value="belum diisi"> - </option>
+                  <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                  <option value="TNI">TNI</option>
+                  <option value="POLRI">POLRI</option>
+                  <option value="PNS">PNS</option>
+                  <option value="Guru">Guru</option>
+                  <option value="Dosen">Dosen</option>
+                  <option value="Petani">Petani</option>
+                  <option value="Nelayan">Nelayan</option>
+                  <option value="Wirausaha">Wirausaha</option>
+                  <option value="Pedagang">Pedagang</option>
+                  <option value="lainnya">lainnya</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Jumlah Penghasilan Keduanya</td>
+              <td colspan="2"><select name="penghasilan" id="penghasilan">
+        					<option value="belum diisi"> - </option>
+        					<option value="0 - 200 Ribu">0 - 200 Ribu</option>
+        					<option value="200 - 500 Ribu">200 - 500 Ribu</option>
+        					<option value="500 Ribu - 1 Juta">500 Ribu - 1 Jt</option>
+        					<option value="1 Juta - 3 Juta">1 Jt - 3 Jt</option>
+        					<option value="3 Juta - 5 Juta">3 Jt - 5 Jt</option>
+        					<option value="5 Juta - keatas">5 jt - keatas</option>
+        				</select>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="3"><input  type="submit" value="submit">
+            </tr>
+
+      </table>
+
+    </form>
+    <center>
+<div class="tombol">
+<a href="lihat.php?update=sukses">lihat daftar</a></div>
+</center>
+<br><br><br><br>
+
+  </body>
+  <script type="text/javascript">
+function validasi() {
+  var nim = document.getElementById("nim").value;
+  var nama = document.getElementById("nama").value;
+  var tempat = document.getElementById("tempat").value;
+  var birthday = document.getElementById("birthday").value;
+  var alamat = document.getElementById("alamat").value;
+  var telp = document.getElementById("telp").value;
+  var prodi = document.getElementById("prodi").value;
+  var gender = document.getElementById("gender").value;
+  var motv = document.getElementById("motv").value;
+  var namaayah = document.getElementById("namaayah").value;
+  var jobayah = document.getElementById("jobayah").value;
+  var namaibu = document.getElementById("namaibu").value;
+  var jobibu = document.getElementById("jobibu").value;
+  var penghasilan= document.getElementById("penghasilan").value;
+  if (nim != "" && nama != "" && tempat  != "" &&  birthday != "" &&  alamat != "" && telp != "" && gender != "" && prodi != "" &&  motv != "" && namaayah!= "" && jobayah !="" && namaibu != "" &&  jobibu != "" && penghasilan != "" ) {
+    return true;
+  }else{
+    alert('Anda harus mengisi data dengan lengkap !');
+  }
+}
+</script>
+</html>

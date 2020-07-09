@@ -1,172 +1,174 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tugas 3 PWEB-form (Presensi Minggu ke-5)</title>
-</head>
-<body>
-	<h1 align="center">Form Pendaftaran<br>Universitas Giwangan-Yogyakarta<br>
-	Kelas Karyawan</h1>
-	<form >
-	<fieldset >
-		<legend>FORMULIR</legend>
-		<div>
-			<label for="name">NAMA&emsp;&emsp;&emsp;&emsp;: </label>
-			<input type="text" name="name">
-		</div>
-		<br>
-		<div>
-			<label for="tempat">Tempat lahir&emsp;&emsp;:</label>
-			<input type="text" name="tempat">
-			<label for="birthday">Tanggal lahir :</label>
-			<input type="date" name="birthday">
-		</div>
+	<title>validasi form</title>
 
-		<br>
-		<div>
-			<label for="alamat">Alamat&emsp;&emsp;&emsp;&emsp;: </label>
-			<textarea  name="textarea" cols="40" rows="1"  id="textarea" placeholder="alamat"></textarea>
+	<style type="text/css">
+		.warning {color: #FF0000;}
+	</style>
+</head>
+
+<body>
+	<form method="POST" action="validasi_form.php">
+	<fieldset >
+			<legend>FORMULIR</legend>
+			<div>
+				<label for="name">NAMA&emsp;&emsp;&emsp;&emsp;: </label>
+				<input type="text" name="name">
+			</div>
+			<br>
+			<div>
+				<label for="tempat">Tempat lahir&emsp;&emsp;:</label>
+				<input type="text" name="tempat">
+				<label for="birthday">Tanggal lahir :</label>
+				<input type="date" name="birthday">
 			</div>
 
-		<br>
-		<div>
-			<label for="telp">No.Handphone&emsp;:</label>
-			<input type="text" name="telp" minlength="10" maxlength="14">
-		</div>
-
-		<br>
-		<div>
-			<label for="gender">kelamin&emsp;&emsp;&emsp;&emsp;: </label>
-			<input type="radio"  name="gender" value="lk"> <label for="lk">Laki-laki</label>
-			<input type="radio" name="gender" value="pr"><label for="pr">Perempuan</label>
-		</div>
-
-		<br>
-		<div>
-			<label for="prodi">Program Studi&emsp;  :</label> <select name="prodi">
-				<option value="tif">Teknik Informatika</option>
-				<option value="tind">Teknik Industri</option>
-				<option value="tek">Teknik Elektro</option>
-				<option value="arab">Pendidikan Bahasa Arab</option>
-				<option value="indo">Pendidikan Bahasa Indonesia</option>
-				<option value="ilkom">Ilmu Komunikasi</option>
-				<option value="si">Sastra Indonesia</option>
-				<option value="sing">Sastra Inggris</option>
-				<option value="sj">Sastra Jepang</option>
-			</select>
-		</div>
-
-		<br>
-		<div>
-			<label for="hari">Hari Kuliah&emsp;&emsp;   :</label>
-			<input type="checkbox" name="day1" value="senin"><label for="day1">Senin</label>
-			<input type="checkbox" name="day2" value="selasa"><label for="day2">Selasa</label>
-			<input type="checkbox" name="day3" value="rabu"><label for="day3">Rabu</label>
-			<input type="checkbox" name="day4" value="kamis"><label for="day4">Kamis</label>
-			<input type="checkbox" name="day5" value="jumat"><label for="day5">Jumat</label>
-			<input type="checkbox" name="day6" value="sabtu"><label for="day6">Sabtu</label>
-			<input type="checkbox" name="day7" value="Minggu"><label for="day7">Minggu</label>
-		</div>
-
-		<br>
-		<div>
-			<label for="joby">Pekerjaan Anda&ensp;:</label>
-			<select name="joby">
-				<option value="tni">TNI</option>
-				<option value="polri">POLRI</option>
-				<option value="pns">PNS</option>
-				<option value="guru">Guru</option>
-				<option value="dosen">Dosen</option>
-				<option value="petani">Petani</option>
-				<option value="nelayan">Nelayan</option>
-				<option value="wira">Wirausaha</option>
-				<option value="dag">Pedagang</option>
-				<option value="lain">lainnya</option>
-			</select>
-			<br>
-			<br>
-			<label for="gaji">Gaji Anda&emsp;&emsp;&ensp;:</label>
-			<select>
-				<option value="1">0 - 200 Ribu</option>
-				<option value="2">200 - 500 Ribu</option>
-				<option value="3">500 Ribu - 1 Jt</option>
-				<option value="4">1 Jt - 3 Jt</option>
-				<option value="5">3 Jt - 5 Jt</option>
-				<option value="6">5 jt - keatas</option>
-			</select>
-		</div>
-
-		<br>
-		<div>
-			<label for="motv">Motivasi&emsp;&emsp;&emsp;&ensp;:</label>
-			<textarea name="textarea" cols="40" rows="1"  id="textarea"></textarea>
-		</div>
-
-		<br>
-		<hr>
-		<div>
-			<label for="dad">Nama Ayah&emsp;&emsp;&ensp;: </label>
-			<input type="text" name="dad">
-		</div>
 			<br>
 			<div>
-			<label for="jobf">Pekerjaan Ayah&emsp;: </label>
-			<select name="jobf">
-				<option value="tni">TNI</option>
-				<option value="pns">PNS</option>
-				<option value="guru">Guru</option>
-				<option value="dosen">Dosen</option>
-				<option value="petani">Petani</option>
-				<option value="nelayan">Nelayan</option>
-				<option value="wira">Wirausaha</option>
-				<option value="dag">Pedagang</option>
-				<option value="lain">lainnya</option>
-			</select>
-		</div>
+				<label for="alamat">Alamat&emsp;&emsp;&emsp;&emsp;: </label>
+				<textarea  name="alamat" cols="40" rows="1"  id="textarea" placeholder="alamat"></textarea>
+				</div>
 
 			<br>
 			<div>
-			<label for="gaji">Gaji Ayah&emsp;&emsp;&emsp;:</label>
-			<select>
-				<option value="1">0 - 200 Ribu</option>
-				<option value="2">200 - 500 Ribu</option>
-				<option value="3">500 Ribu - 1 Jt</option>
-				<option value="4">1 Jt - 3 Jt</option>
-				<option value="5">3 Jt - 5 Jt</option>
-				<option value="6">5 jt - keatas</option>
-			</select>
-		</div>
+				<label for="telp">No.Handphone&emsp;:</label>
+				<input type="text" name="telp" minlength="10" maxlength="14">
+			</div>
 
-		<br>
-		<hr>
-		<div>
-			<label for="mom">Nama Ibu&emsp;&emsp;&emsp;: </label>
-			<input type="te" name="mom">
-		</div>
 			<br>
+			<div>
+				<label for="gender">kelamin&emsp;&emsp;&emsp;&emsp;: </label>
+				<input type="radio"  name="gender" value="Laki-laki"> <label for="lk">Laki-laki</label>
+				<input type="radio" name="gender" value="Perempuan"><label for="pr">Perempuan</label>
+			</div>
 
-		<div>
-			<label for="jobm">Pekerjaan Ibu&emsp;&ensp;: </label>
-			<select name="jobm">
-				<option value="ibu">Ibu Rumah Tangga</option>
-				<option value="tni">TNI</option>
-				<option value="pns">PNS</option>
-				<option value="guru">Guru</option>
-				<option value="dosen">Dosen</option>
-				<option value="petani">Petani</option>
-				<option value="nelayan">Nelayan</option>
-				<option value="wira">Wirausaha</option>
-				<option value="dag">Pedagang</option>
-				<option value="lain">lainnya</option>
-			</select>
-		</div>
+			<br>
+			<div>
+				<label for="prodi">Program Studi&emsp;  :</label>
+				 <select name="prodi" >
+					<option value="belum diisi"> - </option>
+					<option value="Teknik Informatika">Teknik Informatika</option>
+					<option value="Teknik Industri">Teknik Industri</option>
+					<option value="Teknik Elektro">Teknik Elektro</option>
+					<option value="Pendidikan Bahasa Arab">Pendidikan Bahasa Arab</option>
+					<option value="Pendidikan Bahasa Indonesia">Pendidikan Bahasa Indonesia</option>
+					<option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
+					<option value="Sastra Indonesia">Sastra Indonesia</option>
+					<option value="Sastra Inggris">Sastra Inggris</option>
+					<option value="Sastra Jepang">Sastra Jepang</option>
+				</select>
+			</div>
 
-		<br>
-		<hr>
-		<br>
-		<input  type="submit" value="submit">
-		<input  type="reset" value="cancel">
+			<br>
+			<div>
+				<label for="joby">Pekerjaan Anda&ensp;:</label>
+				<select name="joby">
+					<option value="belum diisi"> - </option>
+					<option value="TNI">TNI</option>
+					<option value="POLRI">POLRI</option>
+					<option value="PNS">PNS</option>
+					<option value="Guru">Guru</option>
+					<option value="Dosen">Dosen</option>
+					<option value="Petani">Petani</option>
+					<option value="Nelayan">Nelayan</option>
+					<option value="Wirausaha">Wirausaha</option>
+					<option value="Pedagang">Pedagang</option>
+					<option value="lainnya">lainnya</option>
+				</select>
+				<br>
+				<br>
+				<label for="gaji" >Penghasilan Anda&ensp;:</label>
+				<select name="gajiy">
+					<option value="belum diisi"> - </option>
+					<option value="0 - 200 Ribu">0 - 200 Ribu</option>
+					<option value="200 - 500 Ribu">200 - 500 Ribu</option>
+					<option value="500 Ribu - 1 Juta">500 Ribu - 1 Jt</option>
+					<option value="1 Juta - 3 Juta">1 Jt - 3 Jt</option>
+					<option value="3 Juta - 5 Juta">3 Jt - 5 Jt</option>
+					<option value="5 Juta - keatas">5 jt - keatas</option>
+				</select>
+			</div>
 
-	</fieldset>
+			<br>
+			<div>
+				<label for="motv">Motivasi&emsp;&emsp;&emsp;&ensp;:</label>
+				<textarea name="motv" cols="40" rows="1"  id="textarea"></textarea>
+			</div>
+
+			<br>
+			<hr>
+			<div>
+				<label for="dad">Nama Ayah&emsp;&emsp;&ensp;: </label>
+				<input type="text" name="dad">
+			</div>
+				<br>
+				<div>
+				<label for="jobf">Pekerjaan Ayah&emsp;: </label>
+				<select name="jobf">
+					<option value="belum diisi"> - </option>
+					<option value="TNI">TNI</option>
+					<option value="POLRI">POLRI</option>
+					<option value="PNS">PNS</option>
+					<option value="Guru">Guru</option>
+					<option value="Dosen">Dosen</option>
+					<option value="Petani">Petani</option>
+					<option value="Nelayan">Nelayan</option>
+					<option value="Wirausaha">Wirausaha</option>
+					<option value="Pedagang">Pedagang</option>
+					<option value="lainnya">lainnya</option>
+				</select>
+			</div>
+
+				<br>
+				<div>
+				<label for="gaji">Penghasilan Ayah :</label>
+				<select name="gajif">
+					<option value="belum diisi"> - </option>
+					<option value="0 - 200 Ribu">0 - 200 Ribu</option>
+					<option value="200 - 500 Ribu">200 - 500 Ribu</option>
+					<option value="500 Ribu - 1 Juta">500 Ribu - 1 Jt</option>
+					<option value="1 Juta - 3 Juta">1 Jt - 3 Jt</option>
+					<option value="3 Juta - 5 Juta">3 Jt - 5 Jt</option>
+					<option value="5 Juta - keatas">5 jt - keatas</option>
+				</select>
+			</div>
+
+			<br>
+			<hr>
+			<div>
+				<label for="mom">Nama Ibu&emsp;&emsp;&emsp;: </label>
+				<input type="text" name="mom">
+			</div>
+				<br>
+
+			<div>
+				<label for="jobm">Pekerjaan Ibu&emsp;&ensp;: </label>
+				<select name="jobm">
+					<option value="belum diisi"> - </option>
+					<option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+					<option value="TNI">TNI</option>
+					<option value="POLRI">POLRI</option>
+					<option value="PNS">PNS</option>
+					<option value="Guru">Guru</option>
+					<option value="Dosen">Dosen</option>
+					<option value="Petani">Petani</option>
+					<option value="Nelayan">Nelayan</option>
+					<option value="Wirausaha">Wirausaha</option>
+					<option value="Pedagang">Pedagang</option>
+					<option value="lainnya">lainnya</option>
+				</select>
+			</div>
+
+			<br>
+			<hr>
+			<br>
+			<input  type="submit" value="submit">
+
+		</fieldset>
 	</form>
+
+
+
 </body>
 </html>
