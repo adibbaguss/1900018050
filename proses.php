@@ -21,7 +21,7 @@ if(!empty($nim) && !empty($nama) && !empty($tempat) &&  !empty($birthday) &&  !e
 fputs($fp,"$nim | $nama | $tempat  |  $birthday |  $alamat | $telp | $gender | $prodi |  $motv | $namaayah  | $jobayah | $namaibu |  $jobibu | $penghasilan\n");
 fclose($fp);
 
-header("location:lihat.php?update=sukses");
+header("location:tabel.php?update=sukses");
 	
 }else{
 	header("location:index.html?gagal");
